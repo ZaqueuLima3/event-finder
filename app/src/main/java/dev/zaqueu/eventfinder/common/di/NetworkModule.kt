@@ -1,9 +1,9 @@
-package dev.zaqueu.eventfinder.common.data.di
+package dev.zaqueu.eventfinder.common.di
 
 import android.util.Log
 import com.google.gson.GsonBuilder
-import dev.zaqueu.eventfinder.common.data.remote.EventApi
-import dev.zaqueu.eventfinder.common.shared.Constants.SICREDI_BASE_URL
+import dev.zaqueu.eventfinder.common.data.remote.services.EventApi
+import dev.zaqueu.eventfinder.common.utils.Constants.API_BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.core.module.Module
@@ -31,7 +31,7 @@ object NetworkModule {
             }
             single {
                 createService<EventApi>(
-                    baseUrl = SICREDI_BASE_URL,
+                    baseUrl = API_BASE_URL,
                     client = get(),
                     factory = get()
                 )
