@@ -2,9 +2,12 @@ package dev.zaqueu.eventfinder.eventfinder.presentation
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import dev.zaqueu.eventfinder.common.domain.model.Event
 import dev.zaqueu.eventfinder.common.presentation.BindingFragment
 import dev.zaqueu.eventfinder.databinding.FragmentEventFinderBinding
+import dev.zaqueu.eventfinder.eventdescription.presentation.EventArgs
 
 class EventFinderFragment(
     private val eventFinderViewModel: EventFinderViewModel,
@@ -21,6 +24,11 @@ class EventFinderFragment(
     private fun setupUI() {
         setupRecyclerView()
         setupObservers()
+        setupAdapterListeners()
+    }
+
+    private fun setupAdapterListeners() {
+        eventsAdapter.setOnEventClickListener(::onEventClicked)
     }
 
     private fun setupRecyclerView() {
@@ -46,4 +54,16 @@ class EventFinderFragment(
             }
         }
     }
+
+    private fun onEventClicked(event: Event) {
+        val navigation =
+            EventFinderFragmentDirections.actionEventFinderToEventDescription(event.toEventArgs())
+        findNavController().navigate(navigation)
+    }
 }
+
+private fun Event.toEventArgs() = EventArgs(
+    title = title,
+    description = description,
+    image = image
+)

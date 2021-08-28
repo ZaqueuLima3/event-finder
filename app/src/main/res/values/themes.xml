@@ -173,4 +173,9 @@
         <item name="spacing9">@dimen/spacing_9</item>
         <item name="iconTouchArea">@dimen/icon_touch_area</item>
     </style>
+
+    <style name="Theme.EventFinder.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.EventFinder.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>
