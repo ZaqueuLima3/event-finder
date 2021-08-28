@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- spacing -->
+    <dimen name="spacing_border">18dp</dimen>
+    <dimen name="spacing_1">4dp</dimen>
+    <dimen name="spacing_2">8dp</dimen>
+    <dimen name="spacing_3">12dp</dimen>
+    <dimen name="spacing_4">16dp</dimen>
+    <dimen name="spacing_5">20dp</dimen>
+    <dimen name="spacing_6">24dp</dimen>
+    <dimen name="spacing_7">32dp</dimen>
+    <dimen name="spacing_8">40dp</dimen>
+    <dimen name="spacing_9">56dp</dimen>
+    <dimen name="icon_touch_area">40dp</dimen>
+
+    <!-- radius -->
+    <dimen name="border_radius_sm">8dp</dimen>
+    <dimen name="border_radius_md">16dp</dimen>
+
+    <!-- shadows -->
+    <dimen name="shadow_sm">8dp</dimen>
+    <dimen name="shadow_md">16dp</dimen>
+    <dimen name="shadow_lg">32dp</dimen>
+</resources>

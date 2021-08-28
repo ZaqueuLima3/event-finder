@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Event Finder</string>
+    <string name="emphasis">Destaques</string>
 </resources>
