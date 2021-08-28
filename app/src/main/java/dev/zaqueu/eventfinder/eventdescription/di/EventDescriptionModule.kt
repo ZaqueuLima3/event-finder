@@ -1,4 +1,4 @@
-package dev.zaqueu.eventfinder.eventfinder.di
+package dev.zaqueu.eventfinder.eventdescription.di
 
 import dev.zaqueu.eventfinder.eventdescription.presentation.EventDescriptionFragment
 import org.koin.androidx.fragment.dsl.fragment
