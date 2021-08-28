@@ -150,5 +150,26 @@
         <item name="onNeutral200">@color/colorOnNeutral200</item>
         <item name="onNeutral100">@color/colorOnNeutral100</item>
         <item name="onBlack">@color/colorNeutral400</item>
+
+        <item name="radiusSm">@dimen/border_radius_sm</item>
+        <item name="radiusMd">@dimen/border_radius_md</item>
+
+        <!-- Shadows -->
+        <item name="boxShadowSm">@dimen/shadow_sm</item>
+        <item name="boxShadowMd">@dimen/shadow_md</item>
+        <item name="boxShadowLg">@dimen/shadow_lg</item>
+
+        <!-- Spacings -->
+        <item name="spacingBorder">@dimen/spacing_border</item>
+        <item name="spacing1">@dimen/spacing_1</item>
+        <item name="spacing2">@dimen/spacing_2</item>
+        <item name="spacing3">@dimen/spacing_3</item>
+        <item name="spacing4">@dimen/spacing_4</item>
+        <item name="spacing5">@dimen/spacing_5</item>
+        <item name="spacing6">@dimen/spacing_6</item>
+        <item name="spacing7">@dimen/spacing_7</item>
+        <item name="spacing8">@dimen/spacing_8</item>
+        <item name="spacing9">@dimen/spacing_9</item>
+        <item name="iconTouchArea">@dimen/icon_touch_area</item>
     </style>
 </resources>
