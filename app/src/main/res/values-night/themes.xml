@@ -1,16 +1,154 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.EventFinder" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+    <style name="Theme.EventFinder" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorBlack</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">?backgroundPrimary</item>
+
+        <item name="colorPrimary">?primary</item>
+        <item name="colorOnPrimary">?onPrimary</item>
+        <item name="colorPrimaryDark">?primaryDark</item>
+        <item name="colorSecondary">?secondary</item>
+        <item name="colorOnSecondary">?onSecondary</item>
+        <item name="colorSurface">?backgroundSecondary</item>
+        <item name="colorControlActivated">?neutral900</item>
+
+        <item name="primaryLightest">@color/colorPrimaryLightest</item>
+        <item name="primaryLighter">@color/colorPrimaryLighter</item>
+        <item name="primaryLight">@color/colorPrimaryLight</item>
+        <item name="primary">@color/colorPrimary</item>
+        <item name="primaryDark">@color/colorPrimaryDark</item>
+        <item name="primaryDarker">@color/colorPrimaryDarker</item>
+
+        <item name="onPrimaryDarker">@color/colorOnPrimaryDarker</item>
+        <item name="onPrimaryDark">@color/colorOnPrimaryDark</item>
+        <item name="onPrimary">@color/colorOnPrimary</item>
+        <item name="onPrimaryLight">@color/colorOnPrimaryLight</item>
+        <item name="onPrimaryLighter">@color/colorOnPrimaryLighter</item>
+        <item name="onPrimaryLightest">@color/colorOnPrimaryLightest</item>
+
+        <item name="secondaryLightest">@color/colorSecondaryDarker</item>
+        <item name="secondaryLighter">@color/colorSecondaryLighter</item>
+        <item name="secondaryLight">@color/colorSecondaryLight</item>
+        <item name="secondary">@color/colorSecondary</item>
+        <item name="secondaryDark">@color/colorSecondaryLighter</item>
+        <item name="secondaryDarker">@color/colorSecondaryLightest</item>
+
+        <item name="onSecondaryDarker">@color/colorOnSecondaryDarker</item>
+        <item name="onSecondaryDark">@color/colorOnSecondaryDark</item>
+        <item name="onSecondary">@color/colorOnSecondary</item>
+        <item name="onSecondaryLight">@color/colorOnSecondaryLight</item>
+        <item name="onSecondaryLighter">@color/colorOnSecondaryLighter</item>
+        <item name="onSecondaryLightest">@color/colorOnSecondaryLightest</item>
+
+        <item name="greenLightest">@color/colorGreenLightest</item>
+        <item name="greenLighter">@color/colorGreenLighter</item>
+        <item name="greenLight">@color/colorGreenDark</item>
+        <item name="green">@color/colorGreen</item>
+        <item name="greenDark">@color/colorGreenDark</item>
+        <item name="greenDarker">@color/colorGreenDarker</item>
+
+        <item name="onGreenDarker">@color/colorOnGreenDarker</item>
+        <item name="onGreenDark">@color/colorOnGreenDark</item>
+        <item name="onGreen">@color/colorOnGreen</item>
+        <item name="onGreenLight">@color/colorOnGreenLight</item>
+        <item name="onGreenLighter">@color/colorOnGreenLighter</item>
+        <item name="onGreenLightest">@color/colorOnGreenLightest</item>
+
+        <item name="blueLightest">@color/colorBlueLightest</item>
+        <item name="blueLighter">@color/colorBlueLighter</item>
+        <item name="blueLight">@color/colorBlueDark</item>
+        <item name="blue">@color/colorBlue</item>
+        <item name="blueDark">@color/colorBlueLight</item>
+        <item name="blueDarker">@color/colorBlueDarker</item>
+
+        <item name="onBlueDarker">@color/colorOnBlueDarker</item>
+        <item name="onBlueDark">@color/colorOnBlueDark</item>
+        <item name="onBlue">@color/colorOnBlue</item>
+        <item name="onBlueLight">@color/colorOnBlueLight</item>
+        <item name="onBlueLighter">@color/colorOnBlueLighter</item>
+        <item name="onBlueLightest">@color/colorOnBlueLightest</item>
+
+        <item name="yellowDarker">@color/colorYellowDarker</item>
+        <item name="yellowDark">@color/colorYellowLight</item>
+        <item name="yellow">@color/colorYellow</item>
+        <item name="yellowLight">@color/colorYellowLight</item>
+        <item name="yellowLighter">@color/colorYellowLighter</item>
+        <item name="yellowLightest">@color/colorYellowLightest</item>
+
+        <item name="onYellowDarker">@color/colorOnYellowDarker</item>
+        <item name="onYellowDark">@color/colorOnYellowDark</item>
+        <item name="onYellow">@color/colorOnYellow</item>
+        <item name="onYellowLight">@color/colorOnYellowLight</item>
+        <item name="onYellowLighter">@color/colorOnYellowLighter</item>
+        <item name="onYellowLightest">@color/colorOnYellowLightest</item>
+
+        <item name="purpleDarker">@color/colorPurpleDarker</item>
+        <item name="purpleDark">@color/colorPurpleLight</item>
+        <item name="purple">@color/colorPurple</item>
+        <item name="purpleLight">@color/colorPurpleDark</item>
+        <item name="purpleLighter">@color/colorPurpleLighter</item>
+        <item name="purpleLightest">@color/colorPurpleLightest</item>
+
+        <item name="onPurpleDarker">@color/colorOnPurpleDarker</item>
+        <item name="onPurpleDark">@color/colorOnPurpleDark</item>
+        <item name="onPurple">@color/colorOnPurple</item>
+        <item name="onPurpleLight">@color/colorOnPurpleLight</item>
+        <item name="onPurpleLighter">@color/colorOnPurpleLighter</item>
+        <item name="onPurpleLightest">@color/colorOnPurpleLightest</item>
+
+        <item name="redDarker">@color/colorRedDarker</item>
+        <item name="redDark">@color/colorRedLight</item>
+        <item name="red">@color/colorRed</item>
+        <item name="redLight">@color/colorRedDark</item>
+        <item name="redLighter">@color/colorRedDarker</item>
+        <item name="redLightest">@color/colorRedLightest</item>
+
+        <item name="onRedDarker">@color/colorOnRedDarker</item>
+        <item name="onRedDark">@color/colorOnRedDark</item>
+        <item name="onRed">@color/colorOnRed</item>
+        <item name="onRedLight">@color/colorOnRedLight</item>
+        <item name="onRedLighter">@color/colorOnRedLighter</item>
+        <item name="onRedLightest">@color/colorOnRedLightest</item>
+
+        <item name="cyanDarker">@color/colorCyanDarker</item>
+        <item name="cyanDark">@color/colorCyanLight</item>
+        <item name="cyan">@color/colorCyan</item>
+        <item name="cyanLight">@color/colorCyanDark</item>
+        <item name="cyanLighter">@color/colorCyanDarker</item>
+        <item name="cyanLightest">@color/colorCyanLightest</item>
+
+        <item name="onCyanDarker">@color/colorOnCyanDarker</item>
+        <item name="onCyanDark">@color/colorOnCyanDark</item>
+        <item name="onCyan">@color/colorOnCyan</item>
+        <item name="onCyanLight">@color/colorOnCyanLight</item>
+        <item name="onCyanLighter">@color/colorOnCyanLighter</item>
+        <item name="onCyanLightest">@color/colorOnCyanLightest</item>
+
+        <item name="backgroundPrimary">@color/colorBackgroundPrimary</item>
+        <item name="backgroundSecondary">@color/colorNeutral800</item>
+
+        <item name="white">@color/colorWhite</item>
+        <item name="neutral900">@color/colorNeutral900</item>
+        <item name="neutral800">@color/colorNeutral200</item>
+        <item name="neutral700">@color/colorNeutral300</item>
+        <item name="neutral600">@color/colorNeutral400</item>
+        <item name="neutral500">@color/colorNeutral500</item>
+        <item name="neutral400">@color/colorNeutral600</item>
+        <item name="neutral300">@color/colorNeutral700</item>
+        <item name="neutral200">@color/colorNeutral800</item>
+        <item name="neutral100">@color/colorNeutral100</item>
+        <item name="black">@color/colorBlack</item>
+
+        <item name="onWhite">@color/colorNeutral600</item>
+        <item name="onNeutral900">@color/colorOnNeutral900</item>
+        <item name="onNeutral800">@color/colorOnNeutral800</item>
+        <item name="onNeutral700">@color/colorOnNeutral700</item>
+        <item name="onNeutral600">@color/colorOnNeutral600</item>
+        <item name="onNeutral500">@color/colorOnNeutral500</item>
+        <item name="onNeutral400">@color/colorOnNeutral400</item>
+        <item name="onNeutral300">@color/colorOnNeutral300</item>
+        <item name="onNeutral200">@color/colorOnNeutral200</item>
+        <item name="onNeutral100">@color/colorOnNeutral100</item>
+        <item name="onBlack">@color/colorNeutral400</item>
     </style>
 </resources>

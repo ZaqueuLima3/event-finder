@@ -1,10 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimaryDarker">#053742</color>
+    <color name="colorPrimaryDark">#074553</color>
+    <color name="colorPrimary">#39A2DB</color>
+    <color name="colorPrimaryLight">#A2DBFA</color>
+    <color name="colorPrimaryLighter">#AADEFA</color>
+    <color name="colorPrimaryLightest">#E8F0F2</color>
+
+    <color name="colorOnPrimaryDarker">@color/colorWhite</color>
+    <color name="colorOnPrimaryDark">@color/colorWhite</color>
+    <color name="colorOnPrimary">@color/colorWhite</color>
+    <color name="colorOnPrimaryLight">@color/colorNeutral900</color>
+    <color name="colorOnPrimaryLighter">@color/colorNeutral900</color>
+    <color name="colorOnPrimaryLightest">@color/colorNeutral900</color>
+
+    <color name="colorSecondaryDarker">#00181E</color>
+    <color name="colorSecondaryDark">#012A36</color>
+    <color name="colorSecondary">#053D4E</color>
+    <color name="colorSecondaryLight">#155364</color>
+    <color name="colorSecondaryLighter">#60B1C5</color>
+    <color name="colorSecondaryLightest">#E7F8FD</color>
+
+    <color name="colorOnSecondaryDarker">@color/colorWhite</color>
+    <color name="colorOnSecondaryDark">@color/colorWhite</color>
+    <color name="colorOnSecondary">@color/colorWhite</color>
+    <color name="colorOnSecondaryLight">@color/colorWhite</color>
+    <color name="colorOnSecondaryLighter">@color/colorNeutral900</color>
+    <color name="colorOnSecondaryLightest">@color/colorNeutral900</color>
+
+    <color name="colorGreenDarker">#005122</color>
+    <color name="colorGreenDark">#006E2F</color>
+    <color name="colorGreen">#009D43</color>
+    <color name="colorGreenLight">#4ACC82</color>
+    <color name="colorGreenLighter">#A3F3C5</color>
+    <color name="colorGreenLightest">#EBFDF3</color>
+
+    <color name="colorOnGreenDarker">@color/colorWhite</color>
+    <color name="colorOnGreenDark">@color/colorWhite</color>
+    <color name="colorOnGreen">@color/colorWhite</color>
+    <color name="colorOnGreenLight">@color/colorNeutral900</color>
+    <color name="colorOnGreenLighter">@color/colorNeutral900</color>
+    <color name="colorOnGreenLightest">@color/colorNeutral900</color>
+
+    <color name="colorRedDarker">#830D00</color>
+    <color name="colorRedDark">#A81A0A</color>
+    <color name="colorRed">#D6342C</color>
+    <color name="colorRedLight">#E37570</color>
+    <color name="colorRedLighter">#F9CAC8</color>
+    <color name="colorRedLightest">#FFF0F0</color>
+
+    <color name="colorOnRedDarker">@color/colorWhite</color>
+    <color name="colorOnRedDark">@color/colorWhite</color>
+    <color name="colorOnRed">@color/colorWhite</color>
+    <color name="colorOnRedLight">@color/colorNeutral900</color>
+    <color name="colorOnRedLighter">@color/colorNeutral900</color>
+    <color name="colorOnRedLightest">@color/colorNeutral900</color>
+
+    <color name="colorBlueDarker">#253F82</color>
+    <color name="colorBlueDark">#355CC0</color>
+    <color name="colorBlue">#5981E3</color>
+    <color name="colorBlueLight">#89A8F8</color>
+    <color name="colorBlueLighter">#BED1FF</color>
+    <color name="colorBlueLightest">#F0F4FF</color>
+
+    <color name="colorOnBlueDarker">@color/colorWhite</color>
+    <color name="colorOnBlueDark">@color/colorWhite</color>
+    <color name="colorOnBlue">@color/colorWhite</color>
+    <color name="colorOnBlueLight">@color/colorNeutral900</color>
+    <color name="colorOnBlueLighter">@color/colorNeutral900</color>
+    <color name="colorOnBlueLightest">@color/colorNeutral900</color>
+
+    <color name="colorYellowDarker">#6C5200</color>
+    <color name="colorYellowDark">#A47C00</color>
+    <color name="colorYellow">#EFBA0F</color>
+    <color name="colorYellowLight">#FBD458</color>
+    <color name="colorYellowLighter">#F9E298</color>
+    <color name="colorYellowLightest">#FDF8E9</color>
+
+    <color name="colorOnYellowDarker">@color/colorWhite</color>
+    <color name="colorOnYellowDark">@color/colorWhite</color>
+    <color name="colorOnYellow">@color/colorWhite</color>
+    <color name="colorOnYellowLight">@color/colorNeutral900</color>
+    <color name="colorOnYellowLighter">@color/colorNeutral900</color>
+    <color name="colorOnYellowLightest">@color/colorNeutral900</color>
+
+    <color name="colorPurpleDarker">#4424AD</color>
+    <color name="colorPurpleDark">#5A38C6</color>
+    <color name="colorPurple">#7C5EE2</color>
+    <color name="colorPurpleLight">#AC93FC</color>
+    <color name="colorPurpleLighter">#D3C6FD</color>
+    <color name="colorPurpleLightest">#F5F1FE</color>
+
+    <color name="colorOnPurpleDarker">@color/colorWhite</color>
+    <color name="colorOnPurpleDark">@color/colorWhite</color>
+    <color name="colorOnPurple">@color/colorWhite</color>
+    <color name="colorOnPurpleLight">@color/colorNeutral900</color>
+    <color name="colorOnPurpleLighter">@color/colorNeutral900</color>
+    <color name="colorOnPurpleLightest">@color/colorNeutral900</color>
+
+    <color name="colorCyanDarker">#066262</color>
+    <color name="colorCyanDark">#0A9090</color>
+    <color name="colorCyan">#51C1C3</color>
+    <color name="colorCyanLight">#7CDBDB</color>
+    <color name="colorCyanLighter">#ACF4F4</color>
+    <color name="colorCyanLightest">#E9FBFB</color>
+
+    <color name="colorOnCyanDarker">@color/colorWhite</color>
+    <color name="colorOnCyanDark">@color/colorWhite</color>
+    <color name="colorOnCyan">@color/colorWhite</color>
+    <color name="colorOnCyanLight">@color/colorNeutral900</color>
+    <color name="colorOnCyanLighter">@color/colorNeutral900</color>
+    <color name="colorOnCyanLightest">@color/colorNeutral900</color>
+
+    <color name="colorNeutral900">#191C1F</color>
+    <color name="colorNeutral800">#282C2F</color>
+    <color name="colorNeutral700">#32363B</color>
+    <color name="colorNeutral600">#464B52</color>
+    <color name="colorNeutral500">#707780</color>
+    <color name="colorNeutral400">#9EA4AC</color>
+    <color name="colorNeutral300">#C9CED4</color>
+    <color name="colorNeutral200">#E6E9ED</color>
+    <color name="colorNeutral100">#F4F7F8</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorOnNeutral900">@color/colorWhite</color>
+    <color name="colorOnNeutral800">@color/colorWhite</color>
+    <color name="colorOnNeutral700">@color/colorWhite</color>
+    <color name="colorOnNeutral600">@color/colorWhite</color>
+    <color name="colorOnNeutral500">@color/colorWhite</color>
+    <color name="colorOnNeutral400">@color/colorNeutral900</color>
+    <color name="colorOnNeutral300">@color/colorNeutral900</color>
+    <color name="colorOnNeutral200">@color/colorNeutral900</color>
+    <color name="colorOnNeutral100">@color/colorSecondaryDarker</color>
+
+    <color name="overlay">#65000000</color>
 </resources>

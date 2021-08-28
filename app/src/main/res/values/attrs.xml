@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="fontDefault" format="reference" />
+    <attr name="fontDefaultBold" format="reference" />
+
+    <!-- Colors -->
+    <attr name="primary" format="color" />
+    <attr name="onPrimary" format="color" />
+    <attr name="primaryDark" format="color" />
+    <attr name="onPrimaryDark" format="color" />
+    <attr name="primaryDarker" format="color" />
+    <attr name="onPrimaryDarker" format="color" />
+    <attr name="primaryLight" format="color" />
+    <attr name="onPrimaryLight" format="color" />
+    <attr name="primaryLighter" format="color" />
+    <attr name="onPrimaryLighter" format="color" />
+    <attr name="primaryLightest" format="color" />
+    <attr name="onPrimaryLightest" format="color" />
+
+    <attr name="secondary" format="color" />
+    <attr name="onSecondary" format="color" />
+    <attr name="secondaryDark" format="color" />
+    <attr name="onSecondaryDark" format="color" />
+    <attr name="secondaryDarker" format="color" />
+    <attr name="onSecondaryDarker" format="color" />
+    <attr name="secondaryLight" format="color" />
+    <attr name="onSecondaryLight" format="color" />
+    <attr name="secondaryLighter" format="color" />
+    <attr name="onSecondaryLighter" format="color" />
+    <attr name="secondaryLightest" format="color" />
+    <attr name="onSecondaryLightest" format="color" />
+
+    <attr name="green" format="color" />
+    <attr name="onGreen" format="color" />
+    <attr name="greenDark" format="color" />
+    <attr name="onGreenDark" format="color" />
+    <attr name="greenDarker" format="color" />
+    <attr name="onGreenDarker" format="color" />
+    <attr name="greenLight" format="color" />
+    <attr name="onGreenLight" format="color" />
+    <attr name="greenLighter" format="color" />
+    <attr name="onGreenLighter" format="color" />
+    <attr name="greenLightest" format="color" />
+    <attr name="onGreenLightest" format="color" />
+
+    <attr name="red" format="color" />
+    <attr name="onRed" format="color" />
+    <attr name="redDark" format="color" />
+    <attr name="onRedDark" format="color" />
+    <attr name="redDarker" format="color" />
+    <attr name="onRedDarker" format="color" />
+    <attr name="redLight" format="color" />
+    <attr name="onRedLight" format="color" />
+    <attr name="redLighter" format="color" />
+    <attr name="onRedLighter" format="color" />
+    <attr name="redLightest" format="color" />
+    <attr name="onRedLightest" format="color" />
+
+    <attr name="blue" format="color" />
+    <attr name="onBlue" format="color" />
+    <attr name="blueDark" format="color" />
+    <attr name="onBlueDark" format="color" />
+    <attr name="blueDarker" format="color" />
+    <attr name="onBlueDarker" format="color" />
+    <attr name="blueLight" format="color" />
+    <attr name="onBlueLight" format="color" />
+    <attr name="blueLighter" format="color" />
+    <attr name="onBlueLighter" format="color" />
+    <attr name="blueLightest" format="color" />
+    <attr name="onBlueLightest" format="color" />
+
+    <attr name="yellow" format="color" />
+    <attr name="onYellow" format="color" />
+    <attr name="yellowDark" format="color" />
+    <attr name="onYellowDark" format="color" />
+    <attr name="yellowDarker" format="color" />
+    <attr name="onYellowDarker" format="color" />
+    <attr name="yellowLight" format="color" />
+    <attr name="onYellowLight" format="color" />
+    <attr name="yellowLighter" format="color" />
+    <attr name="onYellowLighter" format="color" />
+    <attr name="yellowLightest" format="color" />
+    <attr name="onYellowLightest" format="color" />
+
+    <attr name="purple" format="color" />
+    <attr name="onPurple" format="color" />
+    <attr name="purpleDark" format="color" />
+    <attr name="onPurpleDark" format="color" />
+    <attr name="purpleDarker" format="color" />
+    <attr name="onPurpleDarker" format="color" />
+    <attr name="purpleLight" format="color" />
+    <attr name="onPurpleLight" format="color" />
+    <attr name="purpleLighter" format="color" />
+    <attr name="onPurpleLighter" format="color" />
+    <attr name="purpleLightest" format="color" />
+    <attr name="onPurpleLightest" format="color" />
+
+    <attr name="cyan" format="color" />
+    <attr name="onCyan" format="color" />
+    <attr name="cyanDark" format="color" />
+    <attr name="onCyanDark" format="color" />
+    <attr name="cyanDarker" format="color" />
+    <attr name="onCyanDarker" format="color" />
+    <attr name="cyanLight" format="color" />
+    <attr name="onCyanLight" format="color" />
+    <attr name="cyanLighter" format="color" />
+    <attr name="onCyanLighter" format="color" />
+    <attr name="cyanLightest" format="color" />
+    <attr name="onCyanLightest" format="color" />
+
+    <attr name="backgroundPrimary" format="color" />
+    <attr name="backgroundSecondary" format="color" />
+    <attr name="neutral100" format="color" />
+    <attr name="onNeutral100" format="color" />
+    <attr name="neutral200" format="color" />
+    <attr name="onNeutral200" format="color" />
+    <attr name="neutral300" format="color" />
+    <attr name="onNeutral300" format="color" />
+    <attr name="neutral400" format="color" />
+    <attr name="onNeutral400" format="color" />
+    <attr name="neutral500" format="color" />
+    <attr name="onNeutral500" format="color" />
+    <attr name="neutral600" format="color" />
+    <attr name="onNeutral600" format="color" />
+    <attr name="neutral700" format="color" />
+    <attr name="onNeutral700" format="color" />
+    <attr name="neutral800" format="color" />
+    <attr name="onNeutral800" format="color" />
+    <attr name="neutral900" format="color" />
+    <attr name="onNeutral900" format="color" />
+    <attr name="black" format="color" />
+    <attr name="onBlack" format="color" />
+    <attr name="white" format="color" />
+    <attr name="onWhite" format="color" />
+
+    <!-- Radius -->
+    <attr name="radiusSm" format="dimension" />
+    <attr name="radiusMd" format="dimension" />
+
+    <!-- shadows -->
+    <attr name="boxShadowSm" format="dimension" />
+    <attr name="boxShadowMd" format="dimension" />
+    <attr name="boxShadowLg" format="dimension" />
+
+    <!-- spacings -->
+    <attr name="spacingBorder" format="dimension" />
+    <attr name="spacing1" format="dimension" />
+    <attr name="spacing2" format="dimension" />
+    <attr name="spacing3" format="dimension" />
+    <attr name="spacing4" format="dimension" />
+    <attr name="spacing5" format="dimension" />
+    <attr name="spacing6" format="dimension" />
+    <attr name="spacing7" format="dimension" />
+    <attr name="spacing8" format="dimension" />
+    <attr name="spacing9" format="dimension" />
+    <attr name="iconTouchArea" format="dimension" />
+</resources>
