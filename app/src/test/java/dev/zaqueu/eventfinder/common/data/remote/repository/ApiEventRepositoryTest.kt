@@ -52,15 +52,11 @@ class ApiEventRepositoryTest {
     fun `should call eventApi when invoke checkInEvent with correct values`() = runBlocking {
         val checkIn = CheckInTestBuilder.build()
         coEvery {
-            eventApi.checkInEvent(any(), any(), any())
+            eventApi.checkInEvent(any())
         } just Runs
         eventRepository.checkInEvent(checkIn)
         coVerify {
-            eventApi.checkInEvent(
-                eventId = checkIn.eventId,
-                name = checkIn.name,
-                email = checkIn.email
-            )
+            eventApi.checkInEvent(checkIn)
         }
     }
 }

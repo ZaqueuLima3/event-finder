@@ -1,5 +1,6 @@
 package dev.zaqueu.eventfinder.eventsubscription.di
 
+import dev.zaqueu.eventfinder.eventsubscription.domain.usecase.CheckInEventUseCase
 import dev.zaqueu.eventfinder.eventsubscription.presentation.EventSubscriptionFragment
 import dev.zaqueu.eventfinder.eventsubscription.presentation.EventSubscriptionViewModel
 import org.koin.androidx.fragment.dsl.fragment
@@ -10,7 +11,7 @@ import org.koin.dsl.module
 
 object EventSubscriptionModule {
     fun load() {
-        loadKoinModules(presentationModules())
+        loadKoinModules(presentationModules() + domainModules())
     }
 
     private fun presentationModules(): Module {
@@ -23,7 +24,17 @@ object EventSubscriptionModule {
 
             viewModel {
                 EventSubscriptionViewModel(
+                    checkInEventUseCase = get()
+                )
+            }
+        }
+    }
 
+    private fun domainModules(): Module {
+        return  module {
+            factory {
+                CheckInEventUseCase(
+                    eventRepository = get()
                 )
             }
         }

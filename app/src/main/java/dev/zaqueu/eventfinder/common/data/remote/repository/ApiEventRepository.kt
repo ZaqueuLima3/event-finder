@@ -14,10 +14,6 @@ class ApiEventRepository(
     }
 
     override suspend fun checkInEvent(checkIn: CheckIn) {
-        eventApi.checkInEvent(
-            eventId = checkIn.eventId,
-            name = checkIn.name,
-            email = checkIn.email
-        )
+        eventApi.checkInEvent(checkIn)
     }
 }
