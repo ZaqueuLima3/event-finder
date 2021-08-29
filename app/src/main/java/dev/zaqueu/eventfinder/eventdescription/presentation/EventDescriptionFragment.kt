@@ -7,6 +7,7 @@ import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.RequestManager
 import dev.zaqueu.eventfinder.R
 import dev.zaqueu.eventfinder.common.presentation.BindingFragment
+import dev.zaqueu.eventfinder.common.utils.handleSingleClick
 import dev.zaqueu.eventfinder.databinding.FragmentEventDescriptionBinding
 
 class EventDescriptionFragment(
@@ -29,6 +30,15 @@ class EventDescriptionFragment(
         binding.toolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
+        binding.content.btnCheckIn.setOnClickListener {
+            it.handleSingleClick {
+                val navigation =
+                    EventDescriptionFragmentDirections.actionEventDescriptionToEventSubscription(
+                        arguments.event
+                    )
+                findNavController().navigate(navigation)
+            }
+        }
     }
 
     private fun bindView() {
@@ -37,7 +47,7 @@ class EventDescriptionFragment(
             content.tvDescription.text = arguments.event.description
             glide
                 .load(arguments.event.image)
-                .placeholder(R.drawable.not_found)
+                .placeholder(R.drawable.placeholder)
                 .into(ivCover)
         }
     }

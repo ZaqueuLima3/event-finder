@@ -38,6 +38,7 @@
             tools:text="Description" />
 
         <Button
+            android:id="@+id/btnCheckIn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="?spacing4"
