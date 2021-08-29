@@ -39,7 +39,7 @@ class EventsAdapter(
                 tvDescription.text = event.description
                 glide
                     .load(event.image)
-                    .placeholder(R.drawable.not_found)
+                    .placeholder(R.drawable.placeholder)
                     .into(ivCover)
             }
             binding.root.setOnClickListener {

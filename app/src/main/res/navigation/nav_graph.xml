@@ -12,13 +12,31 @@
         tools:layout="@layout/fragment_event_finder">
         <action
             android:id="@+id/action_eventFinder_to_eventDescription"
-            app:destination="@id/eventDescriptionFragment" />
+            app:destination="@id/eventDescriptionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/eventDescriptionFragment"
         android:name="dev.zaqueu.eventfinder.eventdescription.presentation.EventDescriptionFragment"
         android:label="fragment_event_description"
         tools:layout="@layout/fragment_event_description">
+        <argument
+            android:name="event"
+            app:argType="dev.zaqueu.eventfinder.eventdescription.presentation.EventArgs" />
+        <action
+            android:id="@+id/action_eventDescription_to_eventSubscription"
+            app:destination="@id/eventSubscriptionFragment"
+            app:enterAnim="@anim/bottom_enter"
+            app:popEnterAnim="@anim/pop_top_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventSubscriptionFragment"
+        android:name="dev.zaqueu.eventfinder.eventsubscription.presentation.EventSubscriptionFragment"
+        android:label="fragmetn_event_subscription"
+        tools:layout="@layout/fragmetn_event_subscription">
         <argument
             android:name="event"
             app:argType="dev.zaqueu.eventfinder.eventdescription.presentation.EventArgs" />
