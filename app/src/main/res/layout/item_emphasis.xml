@@ -24,33 +24,76 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
+        <ImageView
+            android:id="@+id/ivCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacing2"
+            android:src="@drawable/ic_calendar"
+            app:layout_constraintBottom_toBottomOf="@id/tvDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvDate"
+            app:tint="?primary" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="?spacing2"
+            android:layout_marginTop="?spacing3"
+            android:textAppearance="?textAppearanceSubtitle2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivCalendar"
+            app:layout_constraintTop_toBottomOf="@id/ivCover"
+            tools:text="event date" />
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="?spacing2"
-            android:layout_marginVertical="?spacing2"
-            android:textAlignment="center"
+            android:layout_margin="?spacing2"
             android:textAppearance="?textAppearanceHeadline6"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivCover"
+            app:layout_constraintTop_toBottomOf="@id/tvDate"
             tools:text="Hello event" />
+
+        <ImageView
+            android:id="@+id/ivLocaltion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacing2"
+            android:src="@drawable/ic_location"
+            app:layout_constraintBottom_toBottomOf="@id/tvLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvLocation"
+            app:tint="?primary" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="?spacing2"
+            android:textAppearance="?textAppearanceSubtitle2"
+            android:textColor="?neutral500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivLocaltion"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="event address" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="?spacing2"
+            android:layout_margin="?spacing2"
             android:ellipsize="end"
             android:maxLines="3"
-            android:textAlignment="center"
             android:textAppearance="?textAppearanceSubtitle2"
             android:textColor="?neutral500"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvLocation"
             tools:text="event description" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,7 +29,9 @@ object EventFinderModule {
         return module {
             single {
                 EventsAdapter(
-                    glide = get()
+                    glide = get(),
+                    geocoder = get(),
+                    dateHelper = get()
                 )
             }
 
