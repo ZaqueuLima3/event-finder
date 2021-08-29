@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import dev.zaqueu.eventfinder.common.domain.model.Event
 import dev.zaqueu.eventfinder.common.presentation.BindingFragment
 import dev.zaqueu.eventfinder.databinding.FragmentEventFinderBinding
-import dev.zaqueu.eventfinder.eventdescription.presentation.EventArgs
 import dev.zaqueu.eventfinder.eventdescription.presentation.toEventArgs
 
 class EventFinderFragment(
@@ -26,6 +25,13 @@ class EventFinderFragment(
         setupRecyclerView()
         setupObservers()
         setupAdapterListeners()
+        setupListeners()
+    }
+
+    private fun setupListeners() {
+        binding.swipeContainer.setOnRefreshListener {
+            requestEvents()
+        }
     }
 
     private fun setupAdapterListeners() {
@@ -42,18 +48,52 @@ class EventFinderFragment(
     private fun setupObservers() {
         eventFinderViewModel.eventViewState.observe(viewLifecycleOwner) { eventsViewState ->
             when (eventsViewState) {
-                is EventFinderViewState.Error -> {
-                    // TODO: handle error
-                }
-                is EventFinderViewState.Loading -> {
-                    // TODO: handle loading
-                }
-                is EventFinderViewState.Success -> {
-                    eventsAdapter.submitList(eventsViewState.events)
-                    eventsAdapter.notifyDataSetChanged()
-                }
+                is EventFinderViewState.Error -> handleError()
+                is EventFinderViewState.Loading -> handleLoading()
+                is EventFinderViewState.Success -> handleSuccess(eventsViewState.events)
             }
         }
+    }
+
+    private fun handleSuccess(events: List<Event>) {
+        eventsAdapter.submitList(events)
+        eventsAdapter.notifyDataSetChanged()
+        binding.apply {
+            tvError.visibility = View.GONE
+            ivError.visibility = View.GONE
+            shimmerFrameLayout.visibility = View.GONE
+            shimmerFrameLayout.stopShimmer()
+            rvEvents.visibility = View.VISIBLE
+            tvEmphasis.visibility = View.VISIBLE
+
+        }
+    }
+
+    private fun handleLoading() {
+        binding.apply {
+            tvError.visibility = View.GONE
+            ivError.visibility = View.GONE
+            rvEvents.visibility = View.GONE
+            tvEmphasis.visibility = View.GONE
+            shimmerFrameLayout.visibility = View.VISIBLE
+            shimmerFrameLayout.startShimmer()
+        }
+    }
+
+    private fun handleError() {
+        binding.apply {
+            tvError.visibility = View.VISIBLE
+            ivError.visibility = View.VISIBLE
+            rvEvents.visibility = View.GONE
+            tvEmphasis.visibility = View.GONE
+            shimmerFrameLayout.visibility = View.GONE
+            shimmerFrameLayout.stopShimmer()
+        }
+    }
+
+    private fun requestEvents() {
+        eventFinderViewModel.getEvents()
+        binding.swipeContainer.isRefreshing = false
     }
 
     private fun onEventClicked(event: Event) {

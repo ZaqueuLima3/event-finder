@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?neutral300"
+    app:cardCornerRadius="?radiusSm"
+    app:cardElevation="?boxShadowMd"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="?spacing3">
+
+        <ImageView
+            android:id="@+id/ivCover"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="?neutral700"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <ImageView
+            android:id="@+id/ivCalendar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="?spacing2"
+            android:background="?neutral700"
+            app:layout_constraintBottom_toBottomOf="@id/tvDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvDate"
+            app:tint="?primary" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="?spacing2"
+            android:layout_marginTop="?spacing3"
+            android:background="?neutral700"
+            android:textAppearance="?textAppearanceSubtitle2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivCalendar"
+            app:layout_constraintTop_toBottomOf="@id/ivCover"
+            tools:text="event date" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="?spacing2"
+            android:background="?neutral700"
+            android:textAppearance="?textAppearanceHeadline6"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDate"
+            tools:text="Hello event" />
+
+        <ImageView
+            android:id="@+id/ivLocaltion"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="?spacing2"
+            android:background="?neutral700"
+            app:layout_constraintBottom_toBottomOf="@id/tvLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvLocation"
+            app:tint="?primary" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="?spacing2"
+            android:background="?neutral700"
+            android:textAppearance="?textAppearanceSubtitle2"
+            android:textColor="?neutral500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivLocaltion"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="event address" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="?spacing2"
+            android:background="?neutral700"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textAppearance="?textAppearanceSubtitle2"
+            android:textColor="?neutral500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLocation"
+            tools:text="event description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -8,4 +8,5 @@
     <string name="insert_a_valid_name">You need to insert a valid name</string>
     <string name="check_in_succeed">CheckIn succeed</string>
     <string name="something_went_wrong">Something went wrong, try again later</string>
+    <string name="sorry_something_went_wrong">Sorry, something went wrong!</string>
 </resources>
