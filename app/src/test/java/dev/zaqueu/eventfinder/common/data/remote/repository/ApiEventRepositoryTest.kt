@@ -1,11 +1,11 @@
 package dev.zaqueu.eventfinder.common.data.remote.repository
 
+import dev.zaqueu.eventfinder.builders.CheckInTestBuilder
 import dev.zaqueu.eventfinder.builders.EventResponseTestBuilder
 import dev.zaqueu.eventfinder.common.data.remote.mapper.mapToModel
 import dev.zaqueu.eventfinder.common.data.remote.services.EventApi
 import dev.zaqueu.eventfinder.common.domain.repository.EventRepository
-import io.mockk.coEvery
-import io.mockk.mockk
+import io.mockk.*
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert
 import org.junit.Before
@@ -45,6 +45,22 @@ class ApiEventRepositoryTest {
                 eventApi.getEvents()
             } throws Exception()
             eventRepository.getEvents()
+        }
+    }
+
+    @Test
+    fun `should call eventApi when invoke checkInEvent with correct values`() = runBlocking {
+        val checkIn = CheckInTestBuilder.build()
+        coEvery {
+            eventApi.checkInEvent(any(), any(), any())
+        } just Runs
+        eventRepository.checkInEvent(checkIn)
+        coVerify {
+            eventApi.checkInEvent(
+                eventId = checkIn.eventId,
+                name = checkIn.name,
+                email = checkIn.email
+            )
         }
     }
 }
