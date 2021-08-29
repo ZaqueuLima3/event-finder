@@ -8,6 +8,7 @@ import dev.zaqueu.eventfinder.common.domain.model.Event
 import dev.zaqueu.eventfinder.common.presentation.BindingFragment
 import dev.zaqueu.eventfinder.databinding.FragmentEventFinderBinding
 import dev.zaqueu.eventfinder.eventdescription.presentation.EventArgs
+import dev.zaqueu.eventfinder.eventdescription.presentation.toEventArgs
 
 class EventFinderFragment(
     private val eventFinderViewModel: EventFinderViewModel,
@@ -61,9 +62,3 @@ class EventFinderFragment(
         findNavController().navigate(navigation)
     }
 }
-
-private fun Event.toEventArgs() = EventArgs(
-    title = title,
-    description = description,
-    image = image
-)
