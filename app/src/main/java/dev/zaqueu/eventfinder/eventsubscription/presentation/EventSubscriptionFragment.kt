@@ -48,9 +48,10 @@ class EventSubscriptionFragment(
     }
 
     private fun setupObservers() {
-        eventSubscriptionViewModel.isSucceed.observe(viewLifecycleOwner) { isSucceed ->
-            if (isSucceed) {
-                handleCheckInSuccess()
+        eventSubscriptionViewModel.checkInState.observe(viewLifecycleOwner) { state ->
+            when (state) {
+                is CheckInState.Success -> handleCheckInSuccess()
+                is CheckInState.Error -> handleCheckInError()
             }
         }
     }
@@ -58,12 +59,12 @@ class EventSubscriptionFragment(
     private fun doCheckIn() {
         val email = binding.tieEmail.text
         val name = binding.tieName.text
-        if (email.isValidEmail().not() || email.isNullOrBlank()) {
-            showToast(getString(R.string.insert_a_valid_email))
-            return
-        }
         if (name.isNullOrBlank()) {
             showToast(getString(R.string.insert_a_valid_name))
+            return
+        }
+        if (email.isValidEmail().not() || email.isNullOrBlank()) {
+            showToast(getString(R.string.insert_a_valid_email))
             return
         }
         eventSubscriptionViewModel.checkInEvent(
@@ -80,6 +81,11 @@ class EventSubscriptionFragment(
         showToast(getString(R.string.check_in_succeed))
         requireView().hideKeyboard()
         resetInputs()
+    }
+
+    private fun handleCheckInError() {
+        showToast(getString(R.string.something_went_wrong))
+        requireView().hideKeyboard()
     }
 
     private fun showToast(message: String) {
