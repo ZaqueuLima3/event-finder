@@ -1,10 +1,10 @@
-package dev.zaqueu.eventfinder.builders
+package dev.zaqueu.eventfinder.dummy
 
 import dev.zaqueu.eventfinder.common.domain.model.CheckIn
 
-class CheckInTestBuilder {
+class CheckInTestDummy {
     companion object {
-        fun build() = CheckIn(
+        fun create() = CheckIn(
             eventId = "eventdId",
             name = "name",
             email = "anyEmail"

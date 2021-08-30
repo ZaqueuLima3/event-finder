@@ -1,10 +1,10 @@
-package dev.zaqueu.eventfinder.builders
+package dev.zaqueu.eventfinder.dummy
 
-import dev.zaqueu.eventfinder.common.data.remote.model.EventResponse
+import dev.zaqueu.eventfinder.common.domain.model.Event
 
-class EventResponseTestBuilder {
+class EventTestDummy {
     companion object {
-        fun build(): EventResponse = EventResponse(
+        fun create() = Event(
             id = "1",
             title = "Feira de adoção de animais na Redenção",
             date = 1534784400000,

@@ -1,6 +1,6 @@
 package dev.zaqueu.eventfinder.eventfinder.domain.usecase
 
-import dev.zaqueu.eventfinder.builders.EventTestBuilder
+import dev.zaqueu.eventfinder.dummy.EventTestDummy
 import dev.zaqueu.eventfinder.common.domain.repository.EventRepository
 import io.mockk.coEvery
 import io.mockk.mockk
@@ -25,8 +25,8 @@ class GetEventsUseCaseTest {
     @Test
     fun `should return a Result with a list of events if success`() = runBlocking {
         val events = listOf(
-            EventTestBuilder.build(),
-            EventTestBuilder.build().copy(id = "2")
+            EventTestDummy.create(),
+            EventTestDummy.create().copy(id = "2")
         )
         coEvery {
             eventRepository.getEvents()

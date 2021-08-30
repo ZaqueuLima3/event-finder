@@ -1,7 +1,7 @@
 package dev.zaqueu.eventfinder.common.data.remote.repository
 
-import dev.zaqueu.eventfinder.builders.CheckInTestBuilder
-import dev.zaqueu.eventfinder.builders.EventResponseTestBuilder
+import dev.zaqueu.eventfinder.dummy.CheckInTestDummy
+import dev.zaqueu.eventfinder.dummy.EventResponseTestDummy
 import dev.zaqueu.eventfinder.common.data.remote.mapper.mapToModel
 import dev.zaqueu.eventfinder.common.data.remote.services.EventApi
 import dev.zaqueu.eventfinder.common.domain.repository.EventRepository
@@ -27,8 +27,8 @@ class ApiEventRepositoryTest {
     @Test
     fun `should return a list of events if success`() = runBlocking {
         val events = listOf(
-            EventResponseTestBuilder.build(),
-            EventResponseTestBuilder.build().copy(id = "2")
+            EventResponseTestDummy.create(),
+            EventResponseTestDummy.create().copy(id = "2")
         )
         coEvery {
             eventApi.getEvents()
@@ -50,7 +50,7 @@ class ApiEventRepositoryTest {
 
     @Test
     fun `should call eventApi when invoke checkInEvent with correct values`() = runBlocking {
-        val checkIn = CheckInTestBuilder.build()
+        val checkIn = CheckInTestDummy.create()
         coEvery {
             eventApi.checkInEvent(any())
         } just Runs

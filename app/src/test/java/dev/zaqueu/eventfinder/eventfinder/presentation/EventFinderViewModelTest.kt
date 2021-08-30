@@ -2,7 +2,7 @@ package dev.zaqueu.eventfinder.eventfinder.presentation
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import dev.zaqueu.eventfinder.TestCoroutineRule
-import dev.zaqueu.eventfinder.builders.EventTestBuilder
+import dev.zaqueu.eventfinder.dummy.EventTestDummy
 import dev.zaqueu.eventfinder.eventfinder.domain.usecase.GetEventsUseCase
 import dev.zaqueu.eventfinder.utils.getOrAwaitValueTest
 import io.mockk.coEvery
@@ -38,8 +38,8 @@ class EventFinderViewModelTest {
     @Test
     fun `should eventViewState receive a list of events if success`() = runBlockingTest {
         val events = listOf(
-            EventTestBuilder.build(),
-            EventTestBuilder.build().copy(id = "2")
+            EventTestDummy.create(),
+            EventTestDummy.create().copy(id = "2")
         )
         coEvery {
             getEventsUseCase()

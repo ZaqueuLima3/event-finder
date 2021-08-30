@@ -1,6 +1,6 @@
 package dev.zaqueu.eventfinder.eventsubscription.domain.usecase
 
-import dev.zaqueu.eventfinder.builders.CheckInTestBuilder
+import dev.zaqueu.eventfinder.dummy.CheckInTestDummy
 import dev.zaqueu.eventfinder.common.domain.repository.EventRepository
 import io.mockk.*
 import kotlinx.coroutines.runBlocking
@@ -23,7 +23,7 @@ class CheckInEventUseCaseTest {
 
     @Test
     fun `should call checkInEvent with correct values`() = runBlocking {
-        val checkIn = CheckInTestBuilder.build()
+        val checkIn = CheckInTestDummy.create()
         coEvery {
             eventRepository.checkInEvent(any())
         } just Runs
@@ -35,7 +35,7 @@ class CheckInEventUseCaseTest {
 
     @Test
     fun `should return Result success if succeed`() = runBlocking {
-        val checkIn = CheckInTestBuilder.build()
+        val checkIn = CheckInTestDummy.create()
         coEvery {
             eventRepository.checkInEvent(any())
         } just Runs
@@ -45,7 +45,7 @@ class CheckInEventUseCaseTest {
 
     @Test
     fun `should Result error id checkInEvent throws an Exception`() = runBlocking {
-        val checkIn = CheckInTestBuilder.build()
+        val checkIn = CheckInTestDummy.create()
         val exception = Exception()
         coEvery {
             eventRepository.checkInEvent(any())

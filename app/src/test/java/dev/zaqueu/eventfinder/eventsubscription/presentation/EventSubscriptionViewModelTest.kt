@@ -2,7 +2,7 @@ package dev.zaqueu.eventfinder.eventsubscription.presentation
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import dev.zaqueu.eventfinder.TestCoroutineRule
-import dev.zaqueu.eventfinder.builders.CheckInTestBuilder
+import dev.zaqueu.eventfinder.dummy.CheckInTestDummy
 import dev.zaqueu.eventfinder.eventsubscription.domain.usecase.CheckInEventUseCase
 import dev.zaqueu.eventfinder.utils.getOrAwaitValueTest
 import io.mockk.coEvery
@@ -38,7 +38,7 @@ class EventSubscriptionViewModelTest {
 
     @Test
     fun `should call checkInEventUseCase with correct values`() = runBlockingTest {
-        val checkIn = CheckInTestBuilder.build()
+        val checkIn = CheckInTestDummy.create()
         coEvery {
             checkInEventUseCase(any())
         } returns Result.success(Unit)
@@ -50,7 +50,7 @@ class EventSubscriptionViewModelTest {
 
     @Test
     fun `should set a CheckInState as success if it succeed`() {
-        val checkIn = CheckInTestBuilder.build()
+        val checkIn = CheckInTestDummy.create()
         coEvery {
             checkInEventUseCase(any())
         } returns Result.success(Unit)
@@ -64,7 +64,7 @@ class EventSubscriptionViewModelTest {
 
     @Test
     fun `should set a CheckInState as error if it failure`() {
-        val checkIn = CheckInTestBuilder.build()
+        val checkIn = CheckInTestDummy.create()
         coEvery {
             checkInEventUseCase(any())
         } returns Result.failure(Exception())
